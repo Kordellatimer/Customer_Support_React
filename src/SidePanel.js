@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import PanelCard from './PanelCard';
+
 
 class SidePanel extends Component {
   render() {
     return (
-      <div style={{ height: '100%', width: '380px', background: 'red' }} />
+      <div style={{ height: '100%', width: '380px', border: 'solid' }}>
+        <PanelCard />
+      </div>
     );
   }
 }
