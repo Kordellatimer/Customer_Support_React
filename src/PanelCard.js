@@ -57,6 +57,22 @@ class PanelCard extends Component {
                 Aye look at this!!! This card is about how much of a ROCKSTAR Carolyn is!
             </CardText>
          </Card>
+
+         <Card>
+            <CardHeader
+                title="Joe"
+                subtitle="Hidden Message"
+                avatar={<Avatar>J</Avatar>}
+            />
+            <CardActions
+                actAsExpander={true}
+            >
+                <FlatButton label="Expand" />
+            </CardActions>
+            <CardText expandable={true}>
+                Aye look at this!!! This card is about how awesome Joe is!
+            </CardText>
+         </Card>
      </div> 
     );
   }
