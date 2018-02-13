@@ -9,7 +9,6 @@ class MyAppBar extends Component {
     open: false,
   };
   onClick = event => {
-    let newState = { open: true };
 
     this.setState({
       open: true,

@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import AppBar from 'material-ui/AppBar';
-import Popover from 'material-ui/Popover';
-import Menu from 'material-ui/Menu';
-import MenuItem from 'material-ui/MenuItem';
+
 
 import SidePanel from './SidePanel';
 import MainContent from './MainContent';
