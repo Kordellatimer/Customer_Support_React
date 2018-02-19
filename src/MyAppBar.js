@@ -23,6 +23,12 @@ class MyAppBar extends Component {
     });
   };
 
+  openPopover = () => {
+    this.setState({
+      open: true,
+    });
+  };
+
 
   render() {
     return (
@@ -36,8 +42,8 @@ class MyAppBar extends Component {
           open={this.state.open}
           anchorEl={this.state.anchorEl}
           onRequestClose={this.handleRequestClose}
-          autoCloseWhenOffScreen={false}
-          modal={true}
+          useLayerForClickAway={false}
+          container={<DialogBox />}
         >
           <Menu>
             <MenuItem primaryText="Refresh" />

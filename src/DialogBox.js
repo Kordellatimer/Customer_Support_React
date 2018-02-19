@@ -34,6 +34,7 @@ class DialogBox extends Component {
           actions={actions}
           modal={true}
           open={this.state.open}
+          disableBackdropClick={true}
         >
           When this pops open, it is sending a call to our customer support team using Twilio on your behalf.
         </Dialog>
