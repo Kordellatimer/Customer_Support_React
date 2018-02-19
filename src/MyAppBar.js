@@ -3,6 +3,7 @@ import AppBar from 'material-ui/AppBar';
 import Popover from 'material-ui/Popover';
 import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
+import DialogBox from './DialogBox';
 
 class MyAppBar extends Component {
   state = {
@@ -22,6 +23,7 @@ class MyAppBar extends Component {
     });
   };
 
+
   render() {
     return (
       <div>
@@ -34,10 +36,12 @@ class MyAppBar extends Component {
           open={this.state.open}
           anchorEl={this.state.anchorEl}
           onRequestClose={this.handleRequestClose}
+          autoCloseWhenOffScreen={false}
+          modal={true}
         >
           <Menu>
             <MenuItem primaryText="Refresh" />
-            <MenuItem primaryText="Call Customer Support" />
+            <DialogBox />
             <MenuItem primaryText="Settings" />
             <MenuItem primaryText="Sign out" />
           </Menu>
