@@ -1,18 +1,29 @@
 import React, { Component } from 'react';
+import MessageList from './MessageList';
+import MessageForm from './MessageForm';
+import './MainContent.css'
 
 class MainContent extends Component {
+
+  constructor(props) {
+        super(props)
+        this.state = {
+          messages: [],
+        }
+      } 
+
+    handleNewMessage = (text) => {
+      this.setState({
+        messages: [...this.state.messages, { me: true, author: "Me", body: text }],
+      })
+    }
+
   render() {
     return (
       <div style={{ height: '100%', width: '100%', border: 'solid' }}>
-        <h1>This is the main container!</h1>
-        <p>
-          I can add some text in here! Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-        </p>
+        <h1>Come Chat with US!</h1>
+        <MessageList messages={this.state.messages} />
+        <MessageForm onMessageSend={this.handleNewMessage} />
       </div>
     );
   }
