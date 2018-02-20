@@ -4,9 +4,6 @@ import FlatButton from 'material-ui/FlatButton';
 import MenuItem from 'material-ui/MenuItem';
 
 
-const accountSid = 'AC65db4e72ba9a26a6da52fccff4949641';
-const authToken = '4e7d1be34496c4b96eeb1466ba9aeba0';
-
 
 class DialogBox extends Component {
     state = {
